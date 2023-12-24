@@ -1,7 +1,7 @@
-import { useFetchAllMovies } from 'hooks';
+// import { useFetchAllMovies } from 'hooks';
 
 export const Home = () => {
-  const { movies, error, loading } = useFetchAllMovies();
+  // const { movies, error, loading } = useFetchAllMovies();
 
   return (
     <div>
