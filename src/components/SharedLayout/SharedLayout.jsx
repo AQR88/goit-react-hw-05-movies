@@ -6,17 +6,16 @@ import { routes } from 'routes';
 export const SharedLayout = () => {
   return (
     <>
-      <div>
-        <div>
-          <Link to={routes.HOME}>
-            <span> Home </span>
-          </Link>
+      <nav>
+        <Link to={routes.HOME}>
+          <span> Home </span>
+        </Link>
 
-          <Link to={routes.MOVIES}>
-            <span> Movies </span>
-          </Link>
-        </div>
-      </div>
+        <Link to={routes.MOVIES}>
+          <span> Movies </span>
+        </Link>
+      </nav>
+
       <Suspense fallback={<div>Loading page...</div>}>
         <Outlet />
       </Suspense>

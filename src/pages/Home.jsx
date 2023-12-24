@@ -1,4 +1,8 @@
+import { useFetchAllMovies } from 'hooks';
+
 export const Home = () => {
+  const { movies, error, loading } = useFetchAllMovies();
+  console.log(movies);
   return (
     <div>
       <ul>
