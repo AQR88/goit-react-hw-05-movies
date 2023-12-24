@@ -10,17 +10,19 @@ export const useFetchAllMovies = () => {
     setLoading(true);
     const fetchAllList = async () => {
       try {
+        console.log('Before API Call');
         const { data } = await getAllMoviesList();
         console.log('API Response:', data);
+
         setMovies(data.results);
       } catch (error) {
-        setError(error);
+        setError('Something went wrong');
       } finally {
         setLoading(false);
       }
     };
     fetchAllList();
-  }, []);
+  }, [error]);
 
   return { movies, error, loading };
 };
