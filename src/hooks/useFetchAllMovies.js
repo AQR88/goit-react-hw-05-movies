@@ -11,8 +11,8 @@ export const useFetchAllMovies = () => {
     const fetchAllList = async () => {
       try {
         const { data } = await getAllMoviesList();
-        // console.log('API Response:', data);
-        setMovies(data);
+        console.log('API Response:', data);
+        setMovies(data.results);
       } catch (error) {
         setError(error);
       } finally {
