@@ -1,3 +1,4 @@
+import { Loader } from 'components/Loader/Loader';
 import { useFetchAllMovies } from 'hooks';
 
 export const Home = () => {
@@ -5,9 +6,13 @@ export const Home = () => {
 
   return (
     <div>
-      {loading && <h3> Loading ... </h3>}
+      {loading && <Loader />}
       {error && <h3> Something went wrong🙄 </h3>}
-      {movies}
+      {movies.map(movie => (
+        <div key={movie.id}>
+          <h3>{movie.title}</h3>
+        </div>
+      ))}
     </div>
   );
 };

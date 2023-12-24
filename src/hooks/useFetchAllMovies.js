@@ -13,7 +13,6 @@ export const useFetchAllMovies = () => {
         console.log('Before API Call');
         const { data } = await getAllMoviesList();
         console.log('API Response:', data);
-
         setMovies(data.results);
       } catch (error) {
         setError('Something went wrong');
