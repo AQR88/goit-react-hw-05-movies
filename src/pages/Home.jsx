@@ -1,16 +1,13 @@
-// import { useFetchAllMovies } from 'hooks';
+import { useFetchAllMovies } from 'hooks';
 
 export const Home = () => {
-  // const { movies, error, loading } = useFetchAllMovies();
+  const { movies, error, loading } = useFetchAllMovies();
 
   return (
     <div>
-      <ul>
-        <h2>Trending today</h2>
-        <li>Movie</li>
-        <li>Movie</li>
-        <li>Movie</li>
-      </ul>
+      {loading && <h3> Loading ... </h3>}
+      {error && <h3> Something went wrong🙄 </h3>}
+      {movies}
     </div>
   );
 };
