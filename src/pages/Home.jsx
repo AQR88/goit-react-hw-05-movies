@@ -10,7 +10,7 @@ export const Home = () => {
       {error && <h3> Something went wrong🙄 </h3>}
       {movies.map(movie => (
         <div key={movie.id}>
-          <h3>{movie.title}</h3>
+          <h4>{movie.title}</h4>
         </div>
       ))}
     </div>
