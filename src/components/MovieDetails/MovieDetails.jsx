@@ -1,9 +1,6 @@
 const MovieDetails = ({
   movie: { title, poster_path, release_date, vote_average, overview, genres },
 }) => {
-  // const { title, poster_path, release_date, vote_average, overview, genres } =
-  //   movie;
-
   const defaultImg =
     'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
 
