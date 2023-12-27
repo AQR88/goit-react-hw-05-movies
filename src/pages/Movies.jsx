@@ -1,25 +1,17 @@
-import { Suspense } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Loader } from 'components/Loader/Loader';
+import { MovieSearchForm } from 'components/MovieSearchForm/MovieSearchForm';
+import { MoviesList } from 'components/MoviesList/MoviesList';
+import useFetchByQuery from 'hooks/useFetchByQuery';
 
 export const Movies = () => {
+  const { movies, error, isLoading, handleSubmit } = useFetchByQuery();
   return (
     <>
-      <h2>Movie</h2>
-      <img
-        src="https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=350x200"
-        alt="defaultImg"
-      />
-      <ul>
-        <li>
-          <Link to="cast"> Cast </Link>
-        </li>
-        <li>
-          <Link to="reviews"> Reviews </Link>
-        </li>
-      </ul>
-      <Suspense fallback={<div> Loading ... </div>}>
-        <Outlet />
-      </Suspense>
+      <MovieSearchForm handleSubmit={handleSubmit} />
+      {isLoading && <Loader />}
+      {error && <h3> Something went wrong🙄... </h3>}
+      {movies.length > 0 && <MoviesList movies={movies} />}
     </>
   );
 };
+// export default Movies;
