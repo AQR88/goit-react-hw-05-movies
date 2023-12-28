@@ -1,5 +1,5 @@
 export const routes = {
   HOME: '/',
-  MOVIES: '/movies/id',
+  MOVIES: '/movies',
   MOVIESDETAILS: '/movies/:moviesId',
 };

@@ -4,12 +4,12 @@ const { useState, useEffect } = require('react');
 const { getMovieFullInfo } = require('services/movie-service');
 
 export const useFetchMovieDetails = () => {
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const { movieId } = useParams();
   useEffect(() => {
-    if (!movieId) return;
+    // if (!movieId) return;
     setLoading(true);
     const fetchMovie = async () => {
       try {
