@@ -14,16 +14,14 @@ export const MovieSearchForm = ({ handleSubmit }) => {
   };
 
   return (
-    <form onSubmit={onHandleSubmit}>
+    <form onSubmit={onHandleSubmit} style={{ display: 'flex', gap: '15px' }}>
       <input
         name="movie"
         required
         value={query}
         onChange={handleChange}
       ></input>
-      <button  type="submit">
-        Search Movie
-      </button>
+      <button type="submit">Search Movie</button>
     </form>
   );
 };

@@ -6,14 +6,14 @@ export const useFetchMovieCast = () => {
   const [credits, setCredits] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { movieId } = useParams();
+  const { movie_id } = useParams();
 
   useEffect(() => {
     setLoading(true);
-    if (!movieId) return;
+    if (!movie_id) return;
     const fetchMovieCast = async () => {
       try {
-        const data = await getMovieCast(movieId);
+        const data = await getMovieCast(movie_id);
         setCredits(data.cast);
       } catch (error) {
         setError('Something went wrong🙄');
@@ -22,7 +22,7 @@ export const useFetchMovieCast = () => {
       }
     };
     fetchMovieCast();
-  }, [movieId]);
+  }, [movie_id]);
 
   return { credits, error, loading };
 };

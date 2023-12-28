@@ -11,8 +11,8 @@ const Cast = () => {
       <h3>Movie cast</h3>
       <ul>
         {movieCast.credits.map(
-          ({ id, profile_path, original_name, character }) => (
-            <li key={id}>
+          ({ movie_id, profile_path, original_name, character }) => (
+            <li key={movie_id}>
               <img
                 src={
                   profile_path

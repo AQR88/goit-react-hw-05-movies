@@ -9,7 +9,7 @@ export const useFetchMovieDetails = () => {
   const [loading, setLoading] = useState(false);
   const { movieId } = useParams();
   useEffect(() => {
-    // if (!movieId) return;
+    if (!movieId) return;
     setLoading(true);
     const fetchMovie = async () => {
       try {

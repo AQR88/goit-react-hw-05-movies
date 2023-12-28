@@ -6,13 +6,13 @@ import { routes } from 'routes';
 export const SharedLayout = () => {
   return (
     <>
-      <nav>
+      <nav style={{ display: 'flex', gap: '15px', flexDirection: 'row' }}>
         <Link to={routes.HOME}>
-          <span> Home </span>
+          <h3> Home </h3>
         </Link>
 
         <Link to={routes.MOVIES}>
-          <span> Movies </span>
+          <h3> Movies </h3>
         </Link>
       </nav>
 
