@@ -14,14 +14,20 @@ export const MovieSearchForm = ({ handleSubmit }) => {
   };
 
   return (
-    <form onSubmit={onHandleSubmit} style={{ display: 'flex', gap: '15px' }}>
+    <form
+      onSubmit={onHandleSubmit}
+      style={{ display: 'flex', gap: '15px', marginLeft: '25px' }}
+    >
       <input
         name="movie"
         required
         value={query}
         onChange={handleChange}
+        style={{ borderRadius: '4px' }}
       ></input>
-      <button type="submit">Search Movie</button>
+      <button type="submit" style={{ borderRadius: '4px' }}>
+        Search Movie
+      </button>
     </form>
   );
 };

@@ -1,6 +1,8 @@
-const MovieDetails = ({ title, poster_path, popularity, overview, genres }) => {
+const MovieDetails = ({
+  movie: { title, poster_path, release_date, overview, genres, vote_average },
+}) => {
   const defaultImg =
-    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
+    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image';
 
   const genreList = genres
     ? genres.map(elem => elem.name).join(',')
@@ -10,6 +12,7 @@ const MovieDetails = ({ title, poster_path, popularity, overview, genres }) => {
     <>
       <div style={{ display: 'flex', gap: '15px', margin: '15px' }}>
         <img
+          style={{ borderRadius: '4px' }}
           src={
             poster_path
               ? `https://image.tmdb.org/t/p/w500/${poster_path}`
@@ -20,21 +23,25 @@ const MovieDetails = ({ title, poster_path, popularity, overview, genres }) => {
         />
         <div>
           {title ? (
-            <h3>{title}</h3>
+            <>
+              <h3>{title}</h3> <h4>{release_date}</h4>
+            </>
           ) : (
-            <p>
-              <h3>Title:</h3> No info
-            </p>
+            <>
+              <h3>Title:</h3> <p> No info </p>
+            </>
           )}
           <h3>User Score: </h3>
-          {popularity ? <p>{popularity}</p> : <p> No info</p>}
+          {vote_average ? <p>{vote_average}</p> : <p> No info</p>}
           <h3>Overview:</h3>
           {overview ? <p>{overview}</p> : <p> No info</p>}
           <h3>Genres:</h3>
           <p>{genreList}</p>
         </div>
       </div>
-      <h4>Additional information</h4>
+      <h4 style={{ textAlign: 'center', textDecoration: 'underline' }}>
+        Additional information
+      </h4>
     </>
   );
 };

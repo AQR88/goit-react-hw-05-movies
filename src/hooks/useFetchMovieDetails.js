@@ -13,7 +13,7 @@ export const useFetchMovieDetails = () => {
     setLoading(true);
     const fetchMovie = async () => {
       try {
-        const { data } = await getMovieFullInfo(movieId);
+        const data = await getMovieFullInfo(movieId);
         setMovie(data);
       } catch (error) {
         setError('Something went wrong🙄');

@@ -11,7 +11,7 @@ export const MoviesList = ({ movies }) => {
           title && (
             <li key={id}>
               <Link to={`${routes.MOVIES}/${id}`} state={{ from: location }}>
-                <h4>{title}</h4>
+                <h4 style={{ color: 'black' }}>{title}</h4>
               </Link>
             </li>
           )

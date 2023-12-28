@@ -17,14 +17,26 @@ export const MoviesDetails = () => {
     <>
       {loading && <Loader />}
       {error && <h3> Something went wrong🙄... </h3>}
-      <MovieDetails movie={movie} />
       <ReturnBtn path={goBack.current} />
-      <ul>
+      {movie && <MovieDetails movie={movie} />}
+      <ul
+        style={{
+          display: 'flex',
+          gap: '10px',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          justifyContent: 'space-around',
+        }}
+      >
         <li>
-          <Link to="cast"> Cast </Link>
+          <Link to="cast">
+            <h4 style={{ color: 'black' }}>Cast</h4>{' '}
+          </Link>
         </li>
         <li>
-          <Link to="reviews"> Reviews </Link>
+          <Link to="reviews">
+            <h4 style={{ color: 'black' }}>Reviews</h4>{' '}
+          </Link>
         </li>
       </ul>
       <Suspense fallback={<div> Loading ... </div>}>

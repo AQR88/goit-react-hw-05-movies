@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #469aee;
 }
 
 code {
@@ -17,4 +18,15 @@ ul,
 li,
 link {
   list-style: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:link:hover,
+a:link:hover {
+  text-transform: uppercase;
+}
+button:hover,
+button:focus {
+  background-color: rgba(51, 231, 75, 0.836);
 }

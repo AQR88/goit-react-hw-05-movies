@@ -45,9 +45,7 @@ export const getMovieCast = async movieId => {
 
 export const getMovieReviews = async movieId => {
   try {
-    const { data } = await axios(
-      `/movie/${movieId}/reviews?api_key=${API_KEY}`
-    );
+    const data = await axios(`/movie/${movieId}/reviews?api_key=${API_KEY}`);
     return data;
   } catch (error) {
     throw error;
