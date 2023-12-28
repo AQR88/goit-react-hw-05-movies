@@ -21,11 +21,17 @@ const MovieDetails = ({
           width={250}
         />
         <div>
-          <h3>{title}</h3>
+          {title ? (
+            <h3>{title}</h3>
+          ) : (
+            <p>
+              <h3>Title:</h3> No info
+            </p>
+          )}
           <h3>User Score: </h3>
-          <p>{popularity}</p>
+          {popularity ? <p>{popularity}</p> : <p> No info</p>}
           <h3>Overview:</h3>
-          <p>{overview}</p>
+          {overview ? <p>{overview}</p> : <p> No info</p>}
           <h3>Genres:</h3>
           <p>{genreList}</p>
         </div>
