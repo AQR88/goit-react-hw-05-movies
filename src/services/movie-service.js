@@ -22,26 +22,30 @@ export const getMovieByQuery = async query => {
   }
 };
 
-export const getMovieFullInfo = async id => {
+export const getMovieFullInfo = async movieId => {
   try {
-    const data = await axios(`/movie/${id}?api_key=${API_KEY}`);
+    const { data } = await axios(`/movie/${movieId}?api_key=${API_KEY}`);
     return data;
   } catch (error) {
     throw error;
   }
 };
-export const getMovieCast = async id => {
+export const getMovieCast = async movieId => {
   try {
-    const data = await axios(`/movie/${id}/credits?api_key=${API_KEY}`);
+    const { data } = await axios(
+      `/movie/${movieId}/credits?api_key=${API_KEY}`
+    );
     return data;
   } catch (error) {
     throw error;
   }
 };
 
-export const getMovieReviews = async id => {
+export const getMovieReviews = async movieId => {
   try {
-    const data = await axios(`/movie/${id}/reviews?api_key=${API_KEY}`);
+    const { data } = await axios(
+      `/movie/${movieId}/reviews?api_key=${API_KEY}`
+    );
     return data;
   } catch (error) {
     throw error;

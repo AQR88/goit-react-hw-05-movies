@@ -2,7 +2,7 @@ import { useFetchMovieReviews } from 'hooks';
 
 const Reviews = () => {
   const movieReviews = useFetchMovieReviews();
-
+  console.log(movieReviews);
   return (
     <>
       <h3>Rewievs</h3>

@@ -13,7 +13,7 @@ export const useFetchMovieReviews = () => {
     if (!movieId) return;
     const fetchMovieReviews = async () => {
       try {
-        const data = await getMovieReviews(movieId);
+        const { data } = await getMovieReviews(movieId);
         setReviews(data.results);
       } catch (error) {
         setError('Something went wrong🙄');
