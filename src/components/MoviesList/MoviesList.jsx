@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { routes } from 'routes';
 
 export const MoviesList = ({ movies }) => {
-  // const location = useLocation();
+  const location = useLocation();
 
   return (
     <ul>
@@ -10,7 +10,7 @@ export const MoviesList = ({ movies }) => {
         ({ id, title }) =>
           title && (
             <li key={id}>
-              <Link to={`${routes.MOVIES}/${id}`}>
+              <Link to={`${routes.MOVIES}/${id}`} state={{ from: location }}>
                 <h4>{title}</h4>
               </Link>
             </li>
