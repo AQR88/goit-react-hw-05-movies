@@ -1,6 +1,6 @@
 import { MagnifyingGlass } from 'react-loader-spinner';
 
-export const Loader = ({ children }) => {
+export const Loader = () => {
   return (
     <MagnifyingGlass
       visible={true}

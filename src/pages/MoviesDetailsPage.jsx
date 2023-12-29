@@ -9,7 +9,6 @@ import { ReturnBtn } from 'components/ReturnBtn/ReturnBtn';
 
 const MoviesDetailsPage = () => {
   const { movie, error, loading } = useFetchMovieDetails();
-  console.log(movie);
   const location = useLocation();
   const goBack = useRef(location.state?.from ?? '/');
 
@@ -39,7 +38,7 @@ const MoviesDetailsPage = () => {
           </Link>
         </li>
       </ul>
-      <Suspense fallback={<div> Loading ... </div>}>
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </>

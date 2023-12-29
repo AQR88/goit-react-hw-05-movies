@@ -1,3 +1,5 @@
+import { Loader } from 'components/Loader/Loader';
+
 const MovieDetails = ({
   movie: { title, poster_path, release_date, overview, genres, vote_average },
 }) => {
@@ -6,7 +8,7 @@ const MovieDetails = ({
 
   const genreList = genres
     ? genres.map(elem => elem.name).join(',')
-    : 'There is no information yet';
+    : 'There is no information yet' || <Loader />;
 
   return (
     <>
