@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/216.755bbc49.chunk.js","mappings":"2KAAA,MAGA,EAHiBA,KACRC,EAAAA,EAAAA,KAAA,MAAAC,SAAI,yD","sources":["components/NotFound/NotFound.jsx"],"sourcesContent":["const NotFound = () => {\n  return <h1>😲Ooops... Something went wrong🙄</h1>;\n};\nexport default NotFound;\n"],"names":["NotFound","_jsx","children"],"sourceRoot":""}
