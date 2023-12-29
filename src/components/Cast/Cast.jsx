@@ -1,9 +1,9 @@
 import { useFetchMovieCast } from 'hooks/useFetchMovieCast';
 
-const defaultImg =
-  'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image';
-
 const Cast = () => {
+  const defaultImg =
+    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image';
+
   const movieCast = useFetchMovieCast();
   if (!movieCast.credits || movieCast.credits.length === 0) {
     return (

@@ -2,7 +2,7 @@ import { Loader } from 'components/Loader/Loader';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { useFetchAllMovies } from 'hooks';
 
-export const Home = () => {
+const Home = () => {
   const { movies, error, loading } = useFetchAllMovies();
 
   return (
@@ -13,3 +13,4 @@ export const Home = () => {
     </div>
   );
 };
+export default Home;

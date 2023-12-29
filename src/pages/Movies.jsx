@@ -3,7 +3,7 @@ import { MovieSearchForm } from 'components/MovieSearchForm/MovieSearchForm';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import useFetchByQuery from 'hooks/useFetchByQuery';
 
-export const Movies = () => {
+const Movies = () => {
   const { movies, error, isLoading, handleSubmit } = useFetchByQuery();
   return (
     <>
@@ -14,3 +14,4 @@ export const Movies = () => {
     </>
   );
 };
+export default Movies;

@@ -7,7 +7,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { ReturnBtn } from 'components/ReturnBtn/ReturnBtn';
 
-export const MoviesDetails = () => {
+const MoviesDetailsPage = () => {
   const { movie, error, loading } = useFetchMovieDetails();
   console.log(movie);
   const location = useLocation();
@@ -45,4 +45,4 @@ export const MoviesDetails = () => {
     </>
   );
 };
-// export default MoviesDetails;
+export default MoviesDetailsPage;
